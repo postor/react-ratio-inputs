@@ -1,13 +1,7 @@
-# react-ratio-inputs
-用来分配百分比/比例的 react 组件 | react componet for assigning percentages/ratios
-
-## 使用 | usage
-
-```
 
 
 import { useState } from 'react'
-import RatioInputs from 'react-ratio-inputs'
+import RatioInputs from '../lib/RatioInputs'
 
 
 const Index = () => {
@@ -24,13 +18,12 @@ const Index = () => {
       ratios={ratios}
       onChange={(ratios: any) => {
         setRatios(ratios)
-      }} // 如不提供 onChange 则不会显示控制杆 | if no onChange provided, controls will not show
-      // max={200} // 如指定最大总和 | maximum sum
-      // min={80}  // 如指定最小总和 | minimum sum
+      }}
+      // max={200}
+      min={80}
     />
     <pre>{JSON.stringify(ratios, null, 2)}</pre>
   </div>)
 }
 
 export default Index
-```
