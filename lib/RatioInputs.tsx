@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement, useEffect, useRef, useState } from 'react'
-import { useMeasure } from 'react-use'
+import useMeasure from 'react-use/lib/useMeasure'
 
 import DefaultContainer from './DefaultContainer'
 import DefaultControls from './DefaultControls'
@@ -7,19 +7,20 @@ import { DefaultItem } from './DefaultItem'
 import RatioItem from './RatioItem'
 const shuffle = require('fast-shuffle').default
 
-
 interface Props {
   ratios: RatioItem[] | any[]
   max?: number
   min?: number
   onChange?: (ratios: RatioItem[]) => any
-  ItemComponent?: ReactElement<{ name: string, value: number }> | any
+  ItemComponent?: ReactElement | any
   ControlsComponent?: ReactElement | any
   ContainerComponent?: ReactElement | any
   propForUnused?: any
   containerProps?: any
   toFixed?: number
   nameForUnused?: string
+  toText?: (item: RatioItem) => string
+  toTitle?: (item: RatioItem) => string
 }
 
 
@@ -27,7 +28,9 @@ const RatioInputs: FunctionComponent<Props> = ({
   ratios, max, min, onChange,
   propForUnused, ControlsComponent = DefaultControls, toFixed = 0,
   ItemComponent = DefaultItem, ContainerComponent = DefaultContainer,
-  nameForUnused = '未使用'
+  nameForUnused = '未使用',
+  toText = ({ name, value }) => `${name}(${value})`,
+  toTitle = ({ name, value }) => `${name}(${value})`,
 }) => {
   const [ref, { width }] = useMeasure()
   const [tmax, setTmax] = useState(0)
@@ -76,7 +79,8 @@ const RatioInputs: FunctionComponent<Props> = ({
     : tratios
 
   return (<ContainerComponent ref={ref}
-    items={items.map(({ value, name, props }, i) => {
+    items={items.map((item, i) => {
+      const { value, name, props } = item
       if (!width) return null
       let tleft = left, twidth = width * value / tmax
       left += twidth
@@ -84,6 +88,8 @@ const RatioInputs: FunctionComponent<Props> = ({
         name={name}
         key={i}
         value={value}
+        text={toText(item)}
+        title={toTitle(item)}
         offset={tleft}
         length={twidth}
         colorScheme={colors[i]}

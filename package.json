@@ -4,7 +4,9 @@
   "description": "用来分配百分比/比例的 react 组件 | react componet for assigning percentages/ratios",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "tsc ./lib/index.ts --jsx react --outDir dist --allowSyntheticDefaultImports --declaration"
   },
   "repository": {
     "type": "git",

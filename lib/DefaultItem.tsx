@@ -10,13 +10,15 @@ interface Props {
   offset: number
   length: number
   colorScheme?: ColorScheme
+  text: string
+  title: string
   [key: string]: any
 }
 
 export const DefaultItem: FunctionComponent<Props> = (props) => {
   let {
-    offset, length, value,
-    name, colorScheme = {}
+    offset, length,
+    colorScheme = {}, text, title
   } = props
   // @ts-ignore
   const { backgroundColor = 'transparent', color = '#000' } = colorScheme
@@ -32,5 +34,5 @@ export const DefaultItem: FunctionComponent<Props> = (props) => {
     textAlign: 'center',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-  }} title={`${name}(${value})`} >{`${name}(${value})`}</div>
+  }} title={title} >{text}</div>
 }

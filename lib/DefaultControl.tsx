@@ -66,17 +66,17 @@ function registerDrag(refEl: any, offsetRef: any,
 ) {
   let dragging = false, curX = 0, curOffset = 0, newOffset = 0
 
-  let mouseDown = function (e: MouseEvent) {
+  let mouseDown = function (e: MouseEvent | TouchEvent) {
     if (e.target !== refEl.current) return
     dragging = true
     setDragging(true)
-    curX = e.pageX
+    curX = getPageX(e)
     curOffset = offsetRef.current
     newOffset = curOffset
   }
-  let mouseMove = function (e: MouseEvent) {
+  let mouseMove = function (e: MouseEvent | TouchEvent) {
     if (!dragging) return
-    let diff = e.pageX - curX
+    let diff = getPageX(e) - curX
     if (!diff) return
     newOffset = diff + curOffset
     onChange(newOffset, false)
@@ -93,10 +93,17 @@ function registerDrag(refEl: any, offsetRef: any,
   document.addEventListener('mousedown', mouseDown)
   document.addEventListener('mousemove', mouseMove)
   document.addEventListener('mouseup', mouseUp)
+  document.addEventListener('touchstart', mouseDown)
+  document.addEventListener('touchmove', mouseMove)
+  document.addEventListener('touchcancle', mouseUp)
+  document.addEventListener('touchend', mouseUp)
   return () => {
     document.removeEventListener('mousedown', mouseDown)
     document.removeEventListener('mousemove', mouseMove)
     document.removeEventListener('mouseup', mouseUp)
+    document.removeEventListener('touchstart', mouseDown)
+    document.removeEventListener('touchmove', mouseMove)
+    document.removeEventListener('touchcancle', mouseUp)
   }
 }
 
