@@ -1,3 +1,3 @@
-import RatioInputs from "./RatioInputs";
+import RatioInputs from "./RatioInputs"
 
 export default RatioInputs 

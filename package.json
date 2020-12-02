@@ -1,6 +1,6 @@
 {
   "name": "react-ratio-inputs",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "用来分配百分比/比例的 react 组件 | react componet for assigning percentages/ratios",
   "main": "dist/index.js",
   "scripts": {

@@ -1,4 +1,5 @@
-import React, { FunctionComponent, forwardRef } from 'react'
+import * as React from 'react'
+import  { FunctionComponent, forwardRef } from 'react'
 
 const DefaultContainer: FunctionComponent<{
   items: [], labels: any, controls: any, style?: any

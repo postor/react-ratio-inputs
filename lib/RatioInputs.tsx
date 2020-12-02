@@ -1,11 +1,13 @@
-import React, { FunctionComponent, ReactElement, useEffect, useRef, useState } from 'react'
-import useMeasure from 'react-use/lib/useMeasure'
+import * as React from 'react'
+import { FunctionComponent, ReactElement, useEffect, useRef, useState } from 'react'
+
 
 import DefaultContainer from './DefaultContainer'
 import DefaultControls from './DefaultControls'
 import { DefaultItem } from './DefaultItem'
 import RatioItem from './RatioItem'
 const shuffle = require('fast-shuffle').default
+const useMeasure = require('react-use/lib/useMeasure').default
 
 interface Props {
   ratios: RatioItem[] | any[]
@@ -21,6 +23,8 @@ interface Props {
   nameForUnused?: string
   toText?: (item: RatioItem) => string
   toTitle?: (item: RatioItem) => string
+  hue2color?: (hue: number) => string
+  hue2backgroundColor?: (hue: number) => string
 }
 
 
@@ -31,6 +35,8 @@ const RatioInputs: FunctionComponent<Props> = ({
   nameForUnused = '未使用',
   toText = ({ name, value }) => `${name}(${value})`,
   toTitle = ({ name, value }) => `${name}(${value})`,
+  hue2color = hue => `hsl(${hue}, 20%, 10%)`,
+  hue2backgroundColor = hue => `hsl(${hue}, 80%, 90%)`
 }) => {
   const [ref, { width }] = useMeasure()
   const [tmax, setTmax] = useState(0)
@@ -113,19 +119,21 @@ const RatioInputs: FunctionComponent<Props> = ({
       }}
     />)}
   />)
+
+
+  function getColors(num: number) {
+    let arr = new Array(num), curHue = 0, hueOffset = Math.floor(360 / num) || 1;
+    for (let i = 0; i < num; i++) {
+      curHue = (curHue + hueOffset) % 360
+      arr[i] = {
+        color: hue2color(curHue),
+        backgroundColor: hue2backgroundColor(curHue)
+      }
+    }
+    return shuffle(1)(arr)
+  }
 }
 
 export default RatioInputs
 
-function getColors(num: number) {
-  let arr = new Array(num), curHue = 0, hueOffset = Math.floor(360 / num) || 1;
-  for (let i = 0; i < num; i++) {
-    curHue = (curHue + hueOffset) % 360
-    arr[i] = {
-      color: `hsl(${curHue}, 30%, 50%)`,
-      backgroundColor: `hsl(${curHue}, 70%, 50%)`
-    }
-  }
-  return shuffle(1)(arr)
-}
 

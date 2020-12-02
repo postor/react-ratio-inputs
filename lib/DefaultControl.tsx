@@ -1,4 +1,5 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from 'react'
+import * as React from 'react'
+import  { FunctionComponent, useEffect, useRef, useState } from 'react'
 
 const width = 14, unit = 'px', defaultColor = 'gray', hoverColor = 'red', height = 10
 

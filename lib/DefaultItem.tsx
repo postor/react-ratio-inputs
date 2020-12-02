@@ -1,4 +1,5 @@
-import React, { FunctionComponent } from 'react'
+import * as React from 'react'
+import { FunctionComponent } from 'react'
 
 interface ColorScheme {
   color: string
@@ -17,7 +18,7 @@ interface Props {
 
 export const DefaultItem: FunctionComponent<Props> = (props) => {
   let {
-    offset, length,
+    offset, length, style = {},
     colorScheme = {}, text, title
   } = props
   // @ts-ignore
@@ -34,5 +35,6 @@ export const DefaultItem: FunctionComponent<Props> = (props) => {
     textAlign: 'center',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
+    ...style
   }} title={title} >{text}</div>
 }
