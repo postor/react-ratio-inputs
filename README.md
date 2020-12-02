@@ -35,6 +35,8 @@ const Index = () => {
       // toTitle={({ name, value }) => `${name} got ${value} coins`}   // 悬停提示 | title
       // hue2color={hue => `hsl(${hue}, 80%, 90%)`}  // 文字颜色 | color
       // hue2backgroundColor={hue => `hsl(${(hue + 180) % 360}, 30%, 50%)`} // 背景色 | backgroud color
+      // propForUnused 未使用项的属性 | prop for unused
+      // nameForUnused 未使用项的名称 | name for unused
     />
     <pre>{JSON.stringify(ratios, null, 2)}</pre>
   </div>)
@@ -46,4 +48,5 @@ export default Index
 使用示例 | example
 
 code: [examples\basic\pages\index.js](./examples/basic/pages/index.js)
-demo online: https://postor.github.io/react-ratio-inputs/
+运行|run : `examples\basic\> npm i && npm run dev`
+online: https://postor.github.io/react-ratio-inputs/

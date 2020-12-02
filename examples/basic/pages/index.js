@@ -49,6 +49,26 @@ const Index = () => {
         hue2backgroundColor={hue => `hsl(${(hue + 180) % 360}, 30%, 50%)`}
       />
     </Section>
+    <Section title="未使用项 | unused item">
+      <RatioInputs
+        ratios={ratios2}
+        onChange={ratios => setRatios2(ratios)}
+        min={80}
+        max={120}
+        nameForUnused='none'
+        propForUnused={{
+          style: {
+            color: '#fff',
+            background: `repeating-linear-gradient(
+          45deg,
+          #606dbc,
+          #606dbc 10px,
+          #465298 10px,
+          #465298 20px
+        )`}
+        }}
+      />
+    </Section>
   </div>)
 }
 
