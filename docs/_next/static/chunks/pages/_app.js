@@ -537,9 +537,9 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
+/***/ "./node_modules./next/dist/build/polyfills/object-assign.js":
 /*!*****************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/object-assign.js ***!
+  !*** ./node_modules./next/dist/build/polyfills/object-assign.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -550,9 +550,9 @@ var assign=Object.assign.bind(Object);module.exports=assign;module.exports.defau
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./":
+/***/ "./node_modules./next/dist/build/webpack/loaders./next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./":
 /*!*******************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ***!
+  !*** ./node_modules./next/dist/build/webpack/loaders./next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ***!
   \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -561,16 +561,16 @@ var assign=Object.assign.bind(Object);module.exports=assign;module.exports.defau
     (window.__NEXT_P = window.__NEXT_P || []).push([
       "/_app",
       function () {
-        return __webpack_require__(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js");
+        return __webpack_require__(/*! next/dist/pages/_app */ "./node_modules./next/dist/pages/_app.js");
       }
     ]);
   
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/client/normalize-trailing-slash.js":
+/***/ "./node_modules./next/dist/client/normalize-trailing-slash.js":
 /*!*******************************************************************!*\
-  !*** ./node_modules/next/dist/client/normalize-trailing-slash.js ***!
+  !*** ./node_modules./next/dist/client/normalize-trailing-slash.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -656,9 +656,9 @@ exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/client/request-idle-callback.js":
+/***/ "./node_modules./next/dist/client/request-idle-callback.js":
 /*!****************************************************************!*\
-  !*** ./node_modules/next/dist/client/request-idle-callback.js ***!
+  !*** ./node_modules./next/dist/client/request-idle-callback.js ***!
   \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -743,9 +743,9 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/client/route-loader.js":
+/***/ "./node_modules./next/dist/client/route-loader.js":
 /*!*******************************************************!*\
-  !*** ./node_modules/next/dist/client/route-loader.js ***!
+  !*** ./node_modules./next/dist/client/route-loader.js ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -767,9 +767,9 @@ exports.isAssetError = isAssetError;
 exports.getClientBuildManifest = getClientBuildManifest;
 exports["default"] = void 0;
 
-var _getAssetPathFromRoute = _interopRequireDefault(__webpack_require__(/*! ../next-server/lib/router/utils/get-asset-path-from-route */ "./node_modules/next/dist/next-server/lib/router/utils/get-asset-path-from-route.js"));
+var _getAssetPathFromRoute = _interopRequireDefault(__webpack_require__(/*! .../next-server/lib/router/utils/get-asset-path-from-route */ "./node_modules./next/dist./next-server/lib/router/utils/get-asset-path-from-route.js"));
 
-var _requestIdleCallback = _interopRequireDefault(__webpack_require__(/*! ./request-idle-callback */ "./node_modules/next/dist/client/request-idle-callback.js")); // 3.8s was arbitrarily chosen as it's what https://web.dev/interactive
+var _requestIdleCallback = _interopRequireDefault(__webpack_require__(/*! ./request-idle-callback */ "./node_modules./next/dist/client/request-idle-callback.js")); // 3.8s was arbitrarily chosen as it's what https://web.dev/interactive
 // considers as "Good" time-to-interactive. We must assume something went
 // wrong beyond this point, and then fall-back to a full page transition to
 // show the user something of value.
@@ -903,7 +903,7 @@ function getClientBuildManifest() {
 function getFilesForRoute(assetPrefix, route) {
   if (true) {
     return Promise.resolve({
-      scripts: [assetPrefix + '/_next/static/chunks/pages' + encodeURI((0, _getAssetPathFromRoute["default"])(route, '.js'))],
+      scripts: [assetPrefix + './next/static/chunks/pages' + encodeURI((0, _getAssetPathFromRoute["default"])(route, '.js'))],
       // Styles are handled by `style-loader` in development:
       css: []
     });
@@ -915,7 +915,7 @@ function getFilesForRoute(assetPrefix, route) {
     }
 
     var allFiles = manifest[route].map(function (entry) {
-      return assetPrefix + '/_next/' + encodeURI(entry);
+      return assetPrefix + './next/' + encodeURI(entry);
     });
     return {
       scripts: allFiles.filter(function (v) {
@@ -1134,9 +1134,9 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/client/router.js":
+/***/ "./node_modules./next/dist/client/router.js":
 /*!*************************************************!*\
-  !*** ./node_modules/next/dist/client/router.js ***!
+  !*** ./node_modules./next/dist/client/router.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1165,14 +1165,14 @@ exports.createRouter = exports.withRouter = exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
+var _router2 = _interopRequireWildcard(__webpack_require__(/*! .../next-server/lib/router/router */ "./node_modules./next/dist./next-server/lib/router/router.js"));
 
 exports.Router = _router2["default"];
 exports.NextRouter = _router2.NextRouter;
 
-var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
+var _routerContext = __webpack_require__(/*! .../next-server/lib/router-context */ "./node_modules./next/dist./next-server/lib/router-context.js");
 
-var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
+var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules./next/dist/client/with-router.js"));
 
 exports.withRouter = _withRouter["default"];
 /* global window */
@@ -1376,9 +1376,9 @@ function makePublicRouterInstance(router) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/client/with-router.js":
+/***/ "./node_modules./next/dist/client/with-router.js":
 /*!******************************************************!*\
-  !*** ./node_modules/next/dist/client/with-router.js ***!
+  !*** ./node_modules./next/dist/client/with-router.js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1393,7 +1393,7 @@ exports["default"] = withRouter;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _router = __webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js");
+var _router = __webpack_require__(/*! ./router */ "./node_modules./next/dist/client/router.js");
 
 function withRouter(ComposedComponent) {
   function WithRouterWrapper(props) {
@@ -1473,9 +1473,9 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/compiled/path-to-regexp/index.js":
+/***/ "./node_modules./next/dist/compiled/path-to-regexp/index.js":
 /*!*****************************************************************!*\
-  !*** ./node_modules/next/dist/compiled/path-to-regexp/index.js ***!
+  !*** ./node_modules./next/dist/compiled/path-to-regexp/index.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1890,9 +1890,9 @@ exports.pathToRegexp = pathToRegexp;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js":
+/***/ "./node_modules./next/dist./next-server/lib/i18n/normalize-locale-path.js":
 /*!******************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/i18n/normalize-locale-path.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1982,9 +1982,9 @@ function normalizeLocalePath(pathname, locales) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/mitt.js":
+/***/ "./node_modules./next/dist./next-server/lib/mitt.js":
 /*!********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/mitt.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/mitt.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2090,9 +2090,9 @@ function mitt() {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router-context.js":
+/***/ "./node_modules./next/dist./next-server/lib/router-context.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router-context.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router-context.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2178,9 +2178,9 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/router.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/router.js":
 /*!*****************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/router.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2209,29 +2209,29 @@ exports.interpolateAs = interpolateAs;
 exports.resolveHref = resolveHref;
 exports["default"] = void 0;
 
-var _normalizeTrailingSlash = __webpack_require__(/*! ../../../client/normalize-trailing-slash */ "./node_modules/next/dist/client/normalize-trailing-slash.js");
+var _normalizeTrailingSlash = __webpack_require__(/*! ../../../client/normalize-trailing-slash */ "./node_modules./next/dist/client/normalize-trailing-slash.js");
 
-var _routeLoader = __webpack_require__(/*! ../../../client/route-loader */ "./node_modules/next/dist/client/route-loader.js");
+var _routeLoader = __webpack_require__(/*! ../../../client/route-loader */ "./node_modules./next/dist/client/route-loader.js");
 
-var _denormalizePagePath = __webpack_require__(/*! ../../server/denormalize-page-path */ "./node_modules/next/dist/next-server/server/denormalize-page-path.js");
+var _denormalizePagePath = __webpack_require__(/*! ../../server/denormalize-page-path */ "./node_modules./next/dist./next-server/server/denormalize-page-path.js");
 
-var _mitt = _interopRequireDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
+var _mitt = _interopRequireDefault(__webpack_require__(/*! ../mitt */ "./node_modules./next/dist./next-server/lib/mitt.js"));
 
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+var _utils = __webpack_require__(/*! ../utils */ "./node_modules./next/dist./next-server/lib/utils.js");
 
-var _escapePathDelimiters = _interopRequireDefault(__webpack_require__(/*! ./utils/escape-path-delimiters */ "./node_modules/next/dist/next-server/lib/router/utils/escape-path-delimiters.js"));
+var _escapePathDelimiters = _interopRequireDefault(__webpack_require__(/*! ./utils/escape-path-delimiters */ "./node_modules./next/dist./next-server/lib/router/utils/escape-path-delimiters.js"));
 
-var _isDynamic = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
+var _isDynamic = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules./next/dist./next-server/lib/router/utils/is-dynamic.js");
 
-var _parseRelativeUrl = __webpack_require__(/*! ./utils/parse-relative-url */ "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js");
+var _parseRelativeUrl = __webpack_require__(/*! ./utils/parse-relative-url */ "./node_modules./next/dist./next-server/lib/router/utils/parse-relative-url.js");
 
-var _querystring = __webpack_require__(/*! ./utils/querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js");
+var _querystring = __webpack_require__(/*! ./utils/querystring */ "./node_modules./next/dist./next-server/lib/router/utils/querystring.js");
 
-var _resolveRewrites = _interopRequireDefault(__webpack_require__(/*! ./utils/resolve-rewrites */ "./node_modules/next/dist/next-server/lib/router/utils/resolve-rewrites.js"));
+var _resolveRewrites = _interopRequireDefault(__webpack_require__(/*! ./utils/resolve-rewrites */ "./node_modules./next/dist./next-server/lib/router/utils/resolve-rewrites.js"));
 
-var _routeMatcher = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js");
+var _routeMatcher = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules./next/dist./next-server/lib/router/utils/route-matcher.js");
 
-var _routeRegex = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
+var _routeRegex = __webpack_require__(/*! ./utils/route-regex */ "./node_modules./next/dist./next-server/lib/router/utils/route-regex.js");
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -2696,7 +2696,7 @@ var Router = /*#__PURE__*/function () {
                   options.locale = this.locale;
                 }
 
-                _require = __webpack_require__(/*! ../i18n/normalize-locale-path */ "./node_modules/next/dist/next-server/lib/i18n/normalize-locale-path.js"), normalizeLocalePath = _require.normalizeLocalePath;
+                _require = __webpack_require__(/*! ../i18n/normalize-locale-path */ "./node_modules./next/dist./next-server/lib/i18n/normalize-locale-path.js"), normalizeLocalePath = _require.normalizeLocalePath;
                 parsedAs = (0, _parseRelativeUrl.parseRelativeUrl)(hasBasePath(as) ? delBasePath(as) : as);
                 localePathResult = normalizeLocalePath(parsedAs.pathname, this.locales);
 
@@ -2861,7 +2861,7 @@ var Router = /*#__PURE__*/function () {
                   console.warn("".concat(shouldInterpolate ? "Interpolating href" : "Mismatching `as` and `href`", " failed to manually provide ") + "the params: ".concat(missingParams.join(', '), " in the `href`'s `query`"));
                 }
 
-                throw new Error((shouldInterpolate ? "The provided `href` (".concat(url, ") value is missing query values (").concat(missingParams.join(', '), ") to be interpolated properly. ") : "The provided `as` value (".concat(asPathname, ") is incompatible with the `href` value (").concat(route, "). ")) + "Read more: https://err.sh/vercel/next.js/".concat(shouldInterpolate ? 'href-interpolation-failed' : 'incompatible-href-as'));
+                throw new Error((shouldInterpolate ? "The provided `href` (".concat(url, ") value is missing query values (").concat(missingParams.join(', '), ") to be interpolated properly. ") : "The provided `as` value (".concat(asPathname, ") is incompatible with the `href` value (").concat(route, "). ")) + "Read more: https://err.sh/vercel./next.js/".concat(shouldInterpolate ? 'href-interpolation-failed' : 'incompatible-href-as'));
 
               case 66:
                 _context.next = 69;
@@ -3643,9 +3643,9 @@ Router.events = (0, _mitt["default"])();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/escape-path-delimiters.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/escape-path-delimiters.js":
 /*!***************************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/escape-path-delimiters.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/escape-path-delimiters.js ***!
   \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3721,9 +3721,9 @@ function escapePathDelimiters(segment) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/format-url.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/format-url.js":
 /*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/format-url.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/format-url.js ***!
   \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3734,7 +3734,7 @@ function escapePathDelimiters(segment) {
 exports.__esModule = true;
 exports.formatUrl = formatUrl;
 
-var querystring = _interopRequireWildcard(__webpack_require__(/*! ./querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js"));
+var querystring = _interopRequireWildcard(__webpack_require__(/*! ./querystring */ "./node_modules./next/dist./next-server/lib/router/utils/querystring.js"));
 
 function _getRequireWildcardCache() {
   if (typeof WeakMap !== "function") return null;
@@ -3911,9 +3911,9 @@ function formatUrl(urlObj) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/get-asset-path-from-route.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/get-asset-path-from-route.js":
 /*!******************************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/get-asset-path-from-route.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/get-asset-path-from-route.js ***!
   \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3990,9 +3990,9 @@ function getAssetPathFromRoute(route) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/is-dynamic.js":
 /*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/is-dynamic.js ***!
   \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4068,9 +4068,9 @@ function isDynamicRoute(route) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/parse-relative-url.js":
 /*!***********************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/parse-relative-url.js ***!
   \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4081,9 +4081,9 @@ function isDynamicRoute(route) {
 exports.__esModule = true;
 exports.parseRelativeUrl = parseRelativeUrl;
 
-var _utils = __webpack_require__(/*! ../../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+var _utils = __webpack_require__(/*! ../../utils */ "./node_modules./next/dist./next-server/lib/utils.js");
 
-var _querystring = __webpack_require__(/*! ./querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js");
+var _querystring = __webpack_require__(/*! ./querystring */ "./node_modules./next/dist./next-server/lib/router/utils/querystring.js");
 /**
 * Parses path-relative urls (e.g. `/hello/world?foo=bar`). If url isn't path-relative
 * (e.g. `./hello`) then at least base must be.
@@ -4176,9 +4176,9 @@ function parseRelativeUrl(url, base) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/path-match.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/path-match.js":
 /*!***************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/path-match.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/path-match.js ***!
   \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4201,7 +4201,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 exports.__esModule = true;
 exports.pathToRegexp = exports["default"] = exports.customRouteMatcherOptions = exports.matcherOptions = void 0;
 
-var pathToRegexp = _interopRequireWildcard(__webpack_require__(/*! next/dist/compiled/path-to-regexp */ "./node_modules/next/dist/compiled/path-to-regexp/index.js"));
+var pathToRegexp = _interopRequireWildcard(__webpack_require__(/*! next/dist/compiled/path-to-regexp */ "./node_modules./next/dist/compiled/path-to-regexp/index.js"));
 
 exports.pathToRegexp = pathToRegexp;
 
@@ -4369,9 +4369,9 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/prepare-destination.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/prepare-destination.js":
 /*!************************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/prepare-destination.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/prepare-destination.js ***!
   \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4397,11 +4397,11 @@ exports.__esModule = true;
 exports.compileNonPath = compileNonPath;
 exports["default"] = prepareDestination;
 
-var _querystring = __webpack_require__(/*! ./querystring */ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js");
+var _querystring = __webpack_require__(/*! ./querystring */ "./node_modules./next/dist./next-server/lib/router/utils/querystring.js");
 
-var _parseRelativeUrl = __webpack_require__(/*! ./parse-relative-url */ "./node_modules/next/dist/next-server/lib/router/utils/parse-relative-url.js");
+var _parseRelativeUrl = __webpack_require__(/*! ./parse-relative-url */ "./node_modules./next/dist./next-server/lib/router/utils/parse-relative-url.js");
 
-var pathToRegexp = _interopRequireWildcard(__webpack_require__(/*! next/dist/compiled/path-to-regexp */ "./node_modules/next/dist/compiled/path-to-regexp/index.js"));
+var pathToRegexp = _interopRequireWildcard(__webpack_require__(/*! next/dist/compiled/path-to-regexp */ "./node_modules./next/dist/compiled/path-to-regexp/index.js"));
 
 function _getRequireWildcardCache() {
   if (typeof WeakMap !== "function") return null;
@@ -4589,7 +4589,7 @@ function prepareDestination(destination, params, query, appendParamsToQuery, bas
     delete parsedDestination.search;
   } catch (err) {
     if (err.message.match(/Expected .*? to not repeat, but got an array/)) {
-      throw new Error("To use a multi-match in the destination you must add `*` at the end of the param name to signify it should repeat. https://err.sh/vercel/next.js/invalid-multi-match");
+      throw new Error("To use a multi-match in the destination you must add `*` at the end of the param name to signify it should repeat. https://err.sh/vercel./next.js/invalid-multi-match");
     }
 
     throw err;
@@ -4665,9 +4665,9 @@ function prepareDestination(destination, params, query, appendParamsToQuery, bas
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/querystring.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/querystring.js":
 /*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/querystring.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/querystring.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4798,9 +4798,9 @@ function assign(target) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/resolve-rewrites.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/resolve-rewrites.js":
 /*!*********************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/resolve-rewrites.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/resolve-rewrites.js ***!
   \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4817,11 +4817,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 exports.__esModule = true;
 exports["default"] = resolveRewrites;
 
-var _pathMatch = _interopRequireDefault(__webpack_require__(/*! ./path-match */ "./node_modules/next/dist/next-server/lib/router/utils/path-match.js"));
+var _pathMatch = _interopRequireDefault(__webpack_require__(/*! ./path-match */ "./node_modules./next/dist./next-server/lib/router/utils/path-match.js"));
 
-var _prepareDestination = _interopRequireDefault(__webpack_require__(/*! ./prepare-destination */ "./node_modules/next/dist/next-server/lib/router/utils/prepare-destination.js"));
+var _prepareDestination = _interopRequireDefault(__webpack_require__(/*! ./prepare-destination */ "./node_modules./next/dist./next-server/lib/router/utils/prepare-destination.js"));
 
-var _normalizeTrailingSlash = __webpack_require__(/*! ../../../../client/normalize-trailing-slash */ "./node_modules/next/dist/client/normalize-trailing-slash.js");
+var _normalizeTrailingSlash = __webpack_require__(/*! ../../../../client/normalize-trailing-slash */ "./node_modules./next/dist/client/normalize-trailing-slash.js");
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -4935,9 +4935,9 @@ function resolveRewrites(asPath, pages, basePath, rewrites, query, resolveHref) 
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/route-matcher.js":
 /*!******************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/route-matcher.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5042,9 +5042,9 @@ function getRouteMatcher(routeRegex) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
+/***/ "./node_modules./next/dist./next-server/lib/router/utils/route-regex.js":
 /*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/router/utils/route-regex.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5170,9 +5170,9 @@ function getRouteRegex(normalizedRoute) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/lib/utils.js":
+/***/ "./node_modules./next/dist./next-server/lib/utils.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/utils.js ***!
+  !*** ./node_modules./next/dist./next-server/lib/utils.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5194,7 +5194,7 @@ exports.loadGetInitialProps = loadGetInitialProps;
 exports.formatWithValidation = formatWithValidation;
 exports.ST = exports.SP = exports.urlObjectKeys = void 0;
 
-var _formatUrl = __webpack_require__(/*! ./router/utils/format-url */ "./node_modules/next/dist/next-server/lib/router/utils/format-url.js");
+var _formatUrl = __webpack_require__(/*! ./router/utils/format-url */ "./node_modules./next/dist./next-server/lib/router/utils/format-url.js");
 /**
 * Utils
 */
@@ -5254,7 +5254,7 @@ function _loadGetInitialProps() {
               break;
             }
 
-            message = "\"".concat(getDisplayName(App), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/vercel/next.js/get-initial-props-as-an-instance-method for more information.");
+            message = "\"".concat(getDisplayName(App), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/vercel./next.js/get-initial-props-as-an-instance-method for more information.");
             throw new Error(message);
 
           case 4:
@@ -5309,7 +5309,7 @@ function _loadGetInitialProps() {
           case 20:
             if (true) {
               if (Object.keys(props).length === 0 && !ctx.ctx) {
-                console.warn("".concat(getDisplayName(App), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic static optimization. https://err.sh/vercel/next.js/empty-object-getInitialProps"));
+                console.warn("".concat(getDisplayName(App), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic static optimization. https://err.sh/vercel./next.js/empty-object-getInitialProps"));
               }
             }
 
@@ -5406,9 +5406,9 @@ exports.ST = ST;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/next-server/server/denormalize-page-path.js":
+/***/ "./node_modules./next/dist./next-server/server/denormalize-page-path.js":
 /*!****************************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/server/denormalize-page-path.js ***!
+  !*** ./node_modules./next/dist./next-server/server/denormalize-page-path.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5419,9 +5419,9 @@ exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denorm
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/pages/_app.js":
+/***/ "./node_modules./next/dist/pages/_app.js":
 /*!**********************************************!*\
-  !*** ./node_modules/next/dist/pages/_app.js ***!
+  !*** ./node_modules./next/dist/pages/_app.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5456,7 +5456,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+var _utils = __webpack_require__(/*! .../next-server/lib/utils */ "./node_modules./next/dist./next-server/lib/utils.js");
 
 exports.AppInitialProps = _utils.AppInitialProps;
 exports.NextWebVitalsMetric = _utils.NextWebVitalsMetric;
@@ -5543,10 +5543,10 @@ var warnUrl;
 
 if (true) {
   warnContainer = (0, _utils.execOnce)(function () {
-    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/vercel/next.js/app-container-deprecated");
+    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/vercel./next.js/app-container-deprecated");
   });
   warnUrl = (0, _utils.execOnce)(function () {
-    console.error("Warning: the 'url' property is deprecated. https://err.sh/vercel/next.js/url-deprecated");
+    console.error("Warning: the 'url' property is deprecated. https://err.sh/vercel./next.js/url-deprecated");
   });
 } // @deprecated noop for now until removal
 
@@ -5902,7 +5902,7 @@ if (true) {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(/*! object-assign */ "./node_modules/next/dist/build/polyfills/object-assign.js");
+var _assign = __webpack_require__(/*! object-assign */ "./node_modules./next/dist/build/polyfills/object-assign.js");
 
 // TODO: this is special because it gets imported during build.
 var ReactVersion = '17.0.1';
@@ -9035,13 +9035,13 @@ module.exports = function(module) {
 
 /***/ 0:
 /*!*****************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ./node_modules/next/dist/client/router.js ***!
+  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ./node_modules./next/dist/client/router.js ***!
   \*****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./");
-module.exports = __webpack_require__(/*! E:\study\react-ratio-inputs\examples\basic\node_modules\next\dist\client\router.js */"./node_modules/next/dist/client/router.js");
+__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app! */"./node_modules./next/dist/build/webpack/loaders./next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./");
+module.exports = __webpack_require__(/*! E:\study\react-ratio-inputs\examples\basic\node_modules\next\dist\client\router.js */"./node_modules./next/dist/client/router.js");
 
 
 /***/ })
