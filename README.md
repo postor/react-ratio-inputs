@@ -48,5 +48,7 @@ export default Index
 使用示例 | example
 
 code: [examples\basic\pages\index.js](./examples/basic/pages/index.js)
-运行|run : `examples\basic\> npm i && npm run dev`
+
+运行|run : `examples\basic> npm i && npm run dev`
+
 online: https://postor.github.io/react-ratio-inputs/
